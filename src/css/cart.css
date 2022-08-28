@@ -1,0 +1,48 @@
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto ; 
+}
+
+.push{
+    height: 155px;
+}
+
+.card .card-body .btn-hover{
+    background-color: #ff8b8b;
+    color: #093f35;
+    font-weight: bold;
+    border-color: #ff8b8b;
+}
+
+.card .card-body .btn-hover:hover{
+    background-color: #fff;
+    color: #093f35;
+    border-color: #ff8b8b;
+}
+
+.trash{
+    border: 1px solid #fff;
+ }
+ .trash:hover{
+    border:  1px solid #be1515;
+    border-radius: 5px;
+    background-color: rgb(247, 226, 226);
+    transition:ease-in-out 0.3;
+ }
+
+ .card .success{
+    background-color: #20AD65;
+    border-color: #20AD65;
+}
+
+.card .success:hover{
+    background-color: #fff;
+    color: #20AD65;
+    border-color: #20AD65;
+}
+
+.card .lb-price {
+    padding: 2px;
+}

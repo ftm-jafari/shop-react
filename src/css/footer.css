@@ -1,0 +1,39 @@
+/* .wrapper {
+    min-height:100%;
+	position:relative;
+} */
+
+/* .footerr{
+    /* position:absolute;
+    left:0;
+    bottom:0;
+    right:0; */
+    
+    /* position: fixed;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+} */
+
+.footer-bg{
+    background-color: #61BFAD;
+    padding: 30px;
+    
+}
+
+.img-cart{
+    width: 24px;
+    height: 24px;
+}
+
+
+.form-email .btn-bg{
+    background-color: rgb(255, 139, 139);
+    border: 2px solid #ff8b8b;
+    color: #fff;
+}
+
+.form-email .btn-bg:hover{
+    background-color: #ff8b8b;
+    border: 2px solid #fff;
+}

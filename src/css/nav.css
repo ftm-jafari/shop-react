@@ -1,0 +1,68 @@
+.navbar{
+    /* background-color: rgb(150, 218, 195); */
+    background-color: #61BFAD;
+}
+
+/* .background{
+    background-image: url(../../public/images/slide/pattern-removebg-preview.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+} */
+
+.logo{
+    width: 40px;
+    height: 50px;
+}
+
+.menu{
+    float: right;
+    padding: 0;
+}
+
+.menu .nav-item .nav-link{
+    background: none;
+    padding: 5px;
+    margin: 10px ;
+    color: #093f35;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.menu .nav-item .nav-link:hover {
+    background: #ff8b8b;
+    border-radius: 10px;
+    transition:ease-in-out 0.3;
+    color: #fff;
+}
+
+.login{
+    float: left;
+}
+
+.login .img-cart{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.login .nav-link :hover{
+    background: #ff8b8b;
+    border-radius: 10px;
+ 
+    transition:ease-in-out 0.3;
+}
+
+.login .nav-link .count-item{
+    padding: 1px 8px;
+    border-radius: 100%;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    position: absolute;
+    display: inline-block;
+    top: 25px;
+    right: 1223px;
+}
