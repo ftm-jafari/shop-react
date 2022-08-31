@@ -7,7 +7,7 @@ const Home = () => {
     return (
          <>
               <Slideshow/>
-              <LoadingPosts/>
+              <Products/>
          </>
     );
 }

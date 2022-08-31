@@ -17,7 +17,6 @@ import CupCake from './components/slider/cupCake';
 import Dessert from './components/slider/dessert';
 import SignIn from './components/signin';
 import ProductModal from './components/modal/modal';
-import { LoadingPosts } from './components/lazyLoad/loadingCard';
 
 const App = () => {
 
@@ -29,17 +28,17 @@ const App = () => {
          <Navbars/>
          <Routes>
             <Route path="/"            element={<Home/>} />
-            <Route path="/products"    element={<LoadingPosts/>} />
+            <Route path="/products"    element={<Products/>} />
             <Route path="/cart"        element={<Cart/>} />
             <Route path="/favorite"    element={<Favorite/>} />
-            <Route path="products/:id" element={ <Detailse/> } />
-            <Route path="/about"       element={ <AboutUs/> } />
-            <Route path="/contact"     element={ <ContactUs/> } />
-            <Route path="/factor"      element={ <Factor/> } />
-            <Route path="/cakes"       element={ <Cakes/> } />
-            <Route path="/cupcake"     element={ <CupCake/> } />
-            <Route path="/dessert"     element={ <Dessert/> } />
-            <Route path="/"            element={ <SignIn/> } />
+            <Route path="products/:id" element={<Detailse/> } />
+            <Route path="/about"       element={<AboutUs/> } />
+            <Route path="/contact"     element={<ContactUs/> } />
+            <Route path="/factor"      element={<Factor/> } />
+            <Route path="/cakes"       element={<Cakes/> } />
+            <Route path="/cupcake"     element={<CupCake/> } />
+            <Route path="/dessert"     element={<Dessert/> } />
+            <Route path="/"            element={<SignIn/> } />
          </Routes>
          </BrowserRouter>
          <Footers/>

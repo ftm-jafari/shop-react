@@ -6,14 +6,10 @@ import { Link } from 'react-router-dom';
 
   
 export function Slideshow () {
-  
-    // State for Active index
+
     const [activeIndex, setActiveIndex] = React.useState(0);
-  
-    // State for Animation
     const [animating, setAnimating] = React.useState(false);
-  
-    // Sample items for Carousel
+
     const items = [
       {
           src: 'images/slide/cake-space.png',
@@ -29,10 +25,8 @@ export function Slideshow () {
           },
     ];
   
-    // Items array length
     const itemLength = items.length - 1
   
-    // Previous button for Carousel
     const previousButton = () => {
         if (animating) return;
         const nextIndex = activeIndex === 0 ?
@@ -40,15 +34,13 @@ export function Slideshow () {
         setActiveIndex(nextIndex);
     }
   
-    // Next button for Carousel
     const nextButton = () => {
         if (animating) return;
         const nextIndex = activeIndex === itemLength ?
             0 : activeIndex + 1;
         setActiveIndex(nextIndex);
     }
-  
-    // Carousel Item Data
+
     const carouselItemData = items.map((item) => {
         return (
             <CarouselItem  key={item.src}  onExited={() => setAnimating(false)} onExiting={() => setAnimating(true)} >
@@ -79,26 +71,25 @@ export function Slideshow () {
         <div className='col-sm-12 col-md-4 col-xl-3 col-lg-4 mt-4'>
             <div className='h5'>
                 <Link to="/cakes" className='text-decoration-none text-black'>
-                <div className='p-3 baner rounded'>
-                <img className='rounded' src="images/slide/cake1.png" alt=""  style={{width: '85px' , height: '85px'}}/>
-                <span className='m-4 fw-bold'>کیک</span>
-                </div>
+                   <div className='p-3 baner rounded'>
+                      <img className='rounded' src="images/slide/cake1.png" alt=""  style={{width: '85px' , height: '85px'}}/>
+                      <span className='m-4 fw-bold'>کیک</span>
+                   </div>
                 </Link><br/>
                 <Link to="/cupcake" className='text-decoration-none text-black'>
-                <div className='p-3 baner rounded'>
-                <img className='rounded' src="images/slide/capcake1.png" alt="" style={{width: '85px' , height: '85px'}} />
-                <span className='m-4 fw-bold'>کاپ کیک</span>
-                </div>
+                    <div className='p-3 baner rounded'>
+                       <img className='rounded' src="images/slide/capcake1.png" alt="" style={{width: '85px' , height: '85px'}} />
+                       <span className='m-4 fw-bold'>کاپ کیک</span>
+                    </div>
                 </Link><br/>
                 <Link to="/dessert" className='text-decoration-none text-black'>
-                <div  className='p-3 baner rounded'>
-                <img  className='rounded' src="images/slide/deser1.png" alt=""  style={{width: '85px' , height: '85px'}}/>
-                <span className='m-4 fw-bold'>دسر</span>
-                </div>
+                    <div  className='p-3 baner rounded'>
+                       <img  className='rounded' src="images/slide/deser1.png" alt=""  style={{width: '85px' , height: '85px'}}/>
+                       <span className='m-4 fw-bold'>دسر</span>
+                    </div>
                 </Link>
-            </div>
-         </div>
-       
+             </div>
+          </div>
         </Row>
       </Container>
     );

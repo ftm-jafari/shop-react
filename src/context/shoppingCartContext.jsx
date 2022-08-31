@@ -44,20 +44,16 @@ const ShoppingCartProvider = (props) =>{
       }
    }
    
-   //favorite
+   //favorite 
    const onFavorite = (product) =>{
       const exist = favItems.find((x) => x.id === product.id);
       if(exist){
          setFavItems(favItems.filter((x) => x.id !== product.id));
          toast.error(product.title +" از علاقه مندی حذف شد ");
-
-         // document.getElementById('btnFav').style.color = '#5a5a5a';
       }else{
          setFavItems([...favItems, {...product}]);
          toast.success(product.title +" به علاقه مندی اضافه شد  ");
-         // document.getElementById('btnFav').style.color = '#bd0606';
-      }
-      
+      } 
     }
    
     const deleteFav = (product)=>{

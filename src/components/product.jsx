@@ -18,7 +18,6 @@ const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete, favItems ,
 
     return (
      <>   
-     
       <Col className='mb-4'> 
          <Card className='mt-4 p-0  shadow-lg mb-3 bg-body rounde' style={{minHeight: 500 }}>
           <Link to={`/products/${product.id}`} >
@@ -30,16 +29,6 @@ const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete, favItems ,
                         <a onClick={()=>changeModal(product)} className="float-end" href="#">
                            <i class="fa-solid fa-eye"></i>
                          </a>
-                         {/* <a className="comment float-end" href="#">
-                            <i className="fa-solid fa-comment"></i>
-                         </a> */}
-                         
-                         {/* {favItems.includes(product.id) ?(
-                           <IoIosHeart onClick={()=> onFavorite(product)} style={{color:'red'}} className="heart float-start"/>
-                         ):(
-                          <IoIosHeartEmpty onClick={()=> onFavorite(product)} style={{color:'black'}} className="heart float-start "/>
-                         )} */}
-                         
                          <a id='btnFav' onClick={() => onFavorite(product)} className={favIcon}  href="#">
                             <i class="fa-solid fa-heart"></i>
                          </a>

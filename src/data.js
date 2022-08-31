@@ -259,6 +259,7 @@ const productss =[
       stock: 14,
       favorite: false,
     },
+    
   ];
   
   export default productss;

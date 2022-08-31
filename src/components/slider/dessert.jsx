@@ -10,17 +10,27 @@ const Dessert =() =>{
    const onAdd = Context.onAdd;
    const onRemove = Context.onRemove;
    const onDelete = Context.onDelete;
+   const [favItems] = Context.favItems;
    const onFavorite = Context.onFavorite; 
-  var CurrencyFormat = require('react-currency-format');
-
+   const changeModal = Context.changeModal;
+   const getItemQuntity = Context.getItemQuntity;
+   var CurrencyFormat = require('react-currency-format');
+   //favorite
+  //  let favIcon = 'heart float-start';
+  //  if(favItems.find((x) => x.id === products.id)){
+  //    favIcon = 'heart float-start text-danger';
+  //  }else{
+  //    favIcon = 'heart float-start';
+  //  }
+ 
 return(
    <Container className=" mt-3">
-            <div className="d-flex align-items-center mb-2">
-               <img src='images/slide/dessert.png'   style={{width: '35px' ,height: '35px'}}/>
-               <h3 className="fw-normal mb-0 text-black">دسرها</h3>  
-            </div>
+         <div className="d-flex align-items-center mb-2">
+              <img src='images/slide/dessert.png'   style={{width: '35px' ,height: '35px'}}/>
+             <h3 className="fw-normal mb-0 text-black">دسرها</h3>  
+          </div>
 
-    <Row md={4} xs={1} sm={2} >
+      <Row md={4} xs={1} sm={2} >
           {products.map(product =>{
               if(product.category == 'دسر'){
                 return(
@@ -32,13 +42,11 @@ return(
                     <CardBody>
                       <CardTitle tag="h5"> 
                            <div className="card-icon">
-                                <a className="comment float-end" href="#">
-                                   <i className="fa-solid fa-comment"></i>
-                                 {/* <img src="images/icons/comment_black_24dp.svg" alt="" /> */}
+                                <a onClick={()=>changeModal(product)} className="float-end" href="#">
+                                   <i class="fa-solid fa-eye"></i>
                                 </a>
                                 <a id='btnFav' onClick={() => onFavorite(product)} className="heart float-start" href="#">
                                   <i className="fa-solid fa-heart"></i>
-                                {/* <img src="images/icons/favorite_border_black_24dp.svg" alt=""/> */}
                                 </a>
                            </div>
                            <Link to={`/products/${product.id}`} className="text-decoration-none text-dark">{product.title}</Link>    
@@ -62,10 +70,27 @@ return(
                              <span className='float-start'>{product.stock}</span>
                            </div><br/>
                       </CardText>
-
-                      <Button onClick={() => onAdd(product)} className='btn mt-auto  align-items-end'>
-                        <img src="images/icons/add to shopping cart.svg" alt="" className='img-cart' />
-                      </Button>
+                      {getItemQuntity(product) === 0 ? (
+                           <Button onClick={() => onAdd(product)} className='btn mt-auto  align-items-end'>
+                               <img src="images/icons/add to shopping cart.svg" alt="" className='img-cart' />
+                           </Button>
+                         ):
+                           <div className='d-flex justify-content-between align-items-center'> 
+                             <div className="d-flex  justify-content-center">
+                                 <button onClick={() => onRemove(product)} className="btn btn-hover  px-2">
+                                   <i className="fas fa-minus"></i>
+                                 </button>
+                                 <label id="form1" min="0" name="quantity" type="number"
+                                   className="form-control form-control-sm  text-center" >{getItemQuntity(product)}</label>
+                                 <button onClick={()=>onAdd(product)} className="btn btn-hover px-2">
+                                   <i className="fas fa-plus"></i>
+                                 </button>
+                               </div>
+                               <div className="d-flex p-2  justify-content-center trash">
+                                  <a onClick={()=>onDelete(product)} href="#!" className="text-danger "><i className="fas fa-trash fa-lg"></i></a>
+                               </div>
+                           </div>
+                      }
                     </div>
                  </Card>
               </Col>
