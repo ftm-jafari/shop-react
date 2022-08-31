@@ -2,14 +2,20 @@ import '../css/products.css';
 import {Col,Card,CardImg,CardBody,CardTitle,CardSubtitle,CardText,Button} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-// import {IoIosHeart , IoIosHeartEmpty } from "react-icons/io";
 
-
-const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete , onFavorite ,changeModal}) => {
+const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete, favItems , onFavorite ,changeModal}) => {
 
   const quantity = getItemQuntity(product);
   var CurrencyFormat = require('react-currency-format');
  
+  //favorite
+  let favIcon = 'heart float-start';
+  if(favItems.find((x) => x.id === product.id)){
+    favIcon = 'heart float-start text-danger';
+  }else{
+    favIcon = 'heart float-start';
+  }
+
     return (
      <>   
      
@@ -34,7 +40,7 @@ const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete , onFavorit
                           <IoIosHeartEmpty onClick={()=> onFavorite(product)} style={{color:'black'}} className="heart float-start "/>
                          )} */}
                          
-                         <a id='btnFav' onClick={() => onFavorite(product)} className="heart float-start "  href="#">
+                         <a id='btnFav' onClick={() => onFavorite(product)} className={favIcon}  href="#">
                             <i class="fa-solid fa-heart"></i>
                          </a>
                     </div>
@@ -85,8 +91,7 @@ const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete , onFavorit
             </div>
            </Card>
           </Col>
-         
-        
+            
      </>
     );
 }

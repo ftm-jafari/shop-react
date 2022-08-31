@@ -1,5 +1,4 @@
-import {BrowserRouter,Router, Routes, Route } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from "./components/home";
@@ -12,7 +11,6 @@ import Detailse from './components/detailse';
 import AboutUs from './components/aboutUs';
 import ContactUs from './components/contactUs';
 import ShoppingCartProvider from './context/shoppingCartContext';
-import { cartContext } from './context/shoppingCartContext';
 import Factor from './components/factor';
 import Cakes from './components/slider/cakes';
 import CupCake from './components/slider/cupCake';
@@ -23,13 +21,11 @@ import { LoadingPosts } from './components/lazyLoad/loadingCard';
 
 const App = () => {
 
-  
-
     return (       
       <>
         <ShoppingCartProvider>
          <BrowserRouter>
-         <ProductModal />
+         <ProductModal/>
          <Navbars/>
          <Routes>
             <Route path="/"            element={<Home/>} />
@@ -43,11 +39,11 @@ const App = () => {
             <Route path="/cakes"       element={ <Cakes/> } />
             <Route path="/cupcake"     element={ <CupCake/> } />
             <Route path="/dessert"     element={ <Dessert/> } />
-            <Route path="/"      element={ <SignIn/> } />
-        </Routes>
+            <Route path="/"            element={ <SignIn/> } />
+         </Routes>
          </BrowserRouter>
          <Footers/>
-         <ToastContainer />
+         <ToastContainer/>
         </ShoppingCartProvider>  
       </>
     );   

@@ -43,7 +43,8 @@ const ShoppingCartProvider = (props) =>{
          toast.error(product.title +" از سبد خرید حذف شد ");
       }
    }
-
+   
+   //favorite
    const onFavorite = (product) =>{
       const exist = favItems.find((x) => x.id === product.id);
       if(exist){
@@ -66,7 +67,7 @@ const ShoppingCartProvider = (props) =>{
       }
     }
 
-    ////modal
+    //modal
     const [modalContent , setmodalContent] = useState([]);
     const [openModal , setOpenModal] = useState(false);
     const changeModal=(product)=>{
