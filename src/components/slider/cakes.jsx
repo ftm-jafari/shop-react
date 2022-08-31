@@ -43,7 +43,7 @@ return(
                       <CardTitle tag="h5"> 
                            <div className="card-icon">
                                <a onClick={()=>changeModal(product)} className="float-end" href="#">
-                                  <i class="fa-solid fa-eye"></i>
+                                  <i className="fa-solid fa-eye"></i>
                                </a>
                                 <a id='btnFav' onClick={() => onFavorite(product)} className="heart float-start" href="#">
                                   <i className="fa-solid fa-heart"></i>

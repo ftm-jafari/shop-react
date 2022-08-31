@@ -2,7 +2,6 @@ import '../css/products.css';
 import {Col,Card,CardImg,CardBody,CardTitle,CardSubtitle,CardText,Button} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-
 const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete, favItems , onFavorite ,changeModal}) => {
 
   const quantity = getItemQuntity(product);
@@ -27,10 +26,10 @@ const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete, favItems ,
                <CardTitle tag="h5"> 
                     <div className="card-icon">
                         <a onClick={()=>changeModal(product)} className="float-end" href="#">
-                           <i class="fa-solid fa-eye"></i>
+                           <i className="fa-solid fa-eye"></i>
                          </a>
                          <a id='btnFav' onClick={() => onFavorite(product)} className={favIcon}  href="#">
-                            <i class="fa-solid fa-heart"></i>
+                            <i className="fa-solid fa-heart"></i>
                          </a>
                     </div>
                     <Link to={`/products/${product.id}`} className="text-decoration-none text-dark">{product.title}</Link>    
@@ -76,7 +75,6 @@ const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete, favItems ,
                         </div>
                     </div>
                }
-
             </div>
            </Card>
           </Col>

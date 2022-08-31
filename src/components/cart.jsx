@@ -36,7 +36,7 @@ const Cart = () => {
                         </div>
                    }
 
-                <Col class="col-xs-12 col-sm-12 col-md-8 ">
+                <Col className="col-xs-12 col-sm-12 col-md-8 ">
                       {cartItems.length !== 0 && (
                             <Card className="card rounded-3 mb-1">
                                 <Row className="card-body d-flex  align-items-center">
@@ -56,11 +56,11 @@ const Cart = () => {
                              </Card>  
                             )}
 
-                        <Card class="card ">
+                        <Card className="card ">
                             {cartItems.map((item) => ( 
-                                   <CardBody class="card-body">
-                                       <Row class="row">
-                                         <Col class="col-lg-5 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                                   <CardBody className="card-body">
+                                       <Row className="row">
+                                         <Col className="col-lg-5 col-md-6 col-sm-12 mb-4 mb-lg-0">
                                          <CardBody className="card-body p-0">
                                             <div className="row d-flex  align-items-center">
                                               <div className="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2">

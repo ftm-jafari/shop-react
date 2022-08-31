@@ -22,7 +22,7 @@ const ProductModal =() => {
         return(
           <div key={p.id}  onClick={(e) => e.stopPropagation()} className="modalContainer">
                <a onClick={changeModal} className="closeBtn  text-decoration-none">
-                   <i class="fa-solid fa-xmark"></i>
+                   <i className="fa-solid fa-xmark"></i>
                 </a>
           <img src={p.img} alt="" />
              <div className="modalRight">

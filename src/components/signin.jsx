@@ -7,24 +7,24 @@ const SignIn = () =>{
     return(
      <Container className=" h-100 py-5"> 
          <Row className=" justify-content-center h-100 ">
-         <div class="form-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
-                <div class="form-container">
-                    <form class="form-horizontal">
-                        <h3 class="title">Login Form</h3>
-                        <div class="form-group">
-                            <span class="input-icon"><i class="fa fa-user"></i></span>
-                            <input class="form-control" type="email" placeholder="Username"/>
+         <div className="form-bg">
+    <div className="container">
+        <div className="row">
+            <div className="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+                <div className="form-container">
+                    <form className="form-horizontal">
+                        <h3 className="title">Login Form</h3>
+                        <div className="form-group">
+                            <span className="input-icon"><i className="fa fa-user"></i></span>
+                            <input className="form-control" type="email" placeholder="Username"/>
                         </div>
-                        <div class="form-group">
-                            <span class="input-icon"><i class="fa fa-lock"></i></span>
-                            <input class="form-control" type="password" placeholder="Password"/>
+                        <div className="form-group">
+                            <span className="input-icon"><i className="fa fa-lock"></i></span>
+                            <input className="form-control" type="password" placeholder="Password"/>
                         </div>
-                        <button class="btn signin">Log in</button>
-                        <span class="forgot-pass"><a href="#">Lost password?</a></span>
-                        <span class="register"><a href="#">Register / Signup</a></span>
+                        <button className="btn signin">Log in</button>
+                        <span className="forgot-pass"><a href="#">Lost password?</a></span>
+                        <span className="register"><a href="#">Register / Signup</a></span>
                     </form>
                 </div>
             </div>
