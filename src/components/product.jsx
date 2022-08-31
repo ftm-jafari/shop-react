@@ -25,10 +25,10 @@ const Product = ({product,getItemQuntity, onAdd , onRemove ,onDelete, favItems ,
              <CardBody>
                <CardTitle tag="h5"> 
                     <div className="card-icon">
-                        <a onClick={()=>changeModal(product)} className="float-end" href="#">
+                         <a onClick={()=>changeModal(product)} className="float-end" href="#">
                            <i className="fa-solid fa-eye"></i>
                          </a>
-                         <a id='btnFav' onClick={() => onFavorite(product)} className={favIcon}  href="#">
+                         <a id='btnFav' onClick={() => onFavorite(product)} className={favIcon} href="#">
                             <i className="fa-solid fa-heart"></i>
                          </a>
                     </div>
