@@ -36,20 +36,20 @@ const Cart = () => {
                         </div>
                    }
 
-                <Col className="col-xs-12 col-sm-12 col-md-8 ">
+                <Col className="col-sm-12 col-md-8">
                       {cartItems.length !== 0 && (
                             <Card className="card rounded-3 mb-1">
                                 <Row className="card-body d-flex  align-items-center">
-                                   <div className="col-xs-2 col-sm-2 col-md-5 col-lg-4 col-xl-4 ">
+                                   <div className="col-sm-2 col-md-5 col-lg-4 col-xl-4 ">
                                      <label className="lb-price" htmlFor="form1">محصول </label>
                                     </div>
-                                    <div className="col-xs-2 col-sm-2  col-md-2 col-lg-2 col-xl-2 ">
+                                    <div className=" col-sm-2  col-md-2 col-lg-2 col-xl-2 ">
                                       <label className="col-6 lb-price" htmlFor="form1"> قیمت </label>
                                      </div>
-                                    <div className="col-xs-2 col-sm-2  col-md-3 col-lg-3 col-xl-2 d-flex ">
+                                    <div className=" col-sm-2  col-md-3 col-lg-3 col-xl-2 d-flex ">
                                      <label className="lb-price" htmlFor="form1">تعداد </label>
                                     </div>
-                                    <div className=" col-xs-2 col-sm-2  col-md-2 col-lg-2 col-xl-2 ">
+                                    <div className=" col-sm-2  col-md-2 col-lg-2 col-xl-2 ">
                                       <label className="col-6 lb-price" htmlFor="form1">مجموع</label>
                                     </div>
                                 </Row>
@@ -60,21 +60,21 @@ const Cart = () => {
                             {cartItems.map((item) => ( 
                                    <CardBody className="card-body">
                                        <Row className="row">
-                                         <Col className="col-lg-5 col-md-6 col-sm-12 mb-4 mb-lg-0">
+                                         <Col className="mb-4 mb-lg-0">
                                          <CardBody className="card-body p-0">
                                             <div className="row d-flex  align-items-center">
-                                              <div className="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2">
+                                              <div className="col-sm-2 col-md-3 col-lg-2 col-xl-2">
                                                <CardImg src={item.img} className="img-fluid rounded-3" alt="img" />
                                                 </div>
-                                                 <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                                 <div className=" col-sm-2 col-md-2 col-lg-2 col-xl-2">
                                                  <span className="h6 ">{item.title}</span>
                                                  </div>
-                                                 <div className="col-xs-2 col-sm-2 col-md-3 col-lg-3 col-xl-2 ">
+                                                 <div className="col-sm-2 col-md-3 col-lg-3 col-xl-2 ">
                                                   <h7>
                                                      <CurrencyFormat value={item.sales} displayType={'text'} thousandSeparator={true}  className=" mb-0" />ریال     
                                                  </h7>
                                                 </div>
-                                                 <div className="col-xs-2 col-sm-2 col-md-2 col-lg-3 col-xl-2 d-flex ">
+                                                 <div className="col-sm-2 col-md-2 col-lg-3 col-xl-2 d-flex ">
                                                   <Button onClick={()=> onRemove(item)} className="btn btn-hover px-2">
                                                    <i className="fas fa-minus"></i>
                                                    </Button>
@@ -85,12 +85,12 @@ const Cart = () => {
                                                      <i className="fas fa-plus"></i>
                                                    </Button>
                                                  </div>
-                                                 <div className="col-xs-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 ">
+                                                 <div className="col-sm-2 col-md-3 col-lg-3 col-xl-3">
                                                   <h6>
                                                      <CurrencyFormat value={item.sales * item.qty} displayType={'text'} thousandSeparator={true} className="mb-0" />ریال
                                                  </h6>
                                                 </div>
-                                                 <div className="col-xs-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 text-end">
+                                                 <div className="col-sm-2 col-md-1 col-lg-1 col-xl-1 text-end">
                                                    <a onClick={()=> onDelete(item)} href="#!" className="text-danger trash p-2"><i className="fas fa-trash fa-lg"></i></a>
                                                  </div>
                                                </div>
@@ -104,7 +104,7 @@ const Cart = () => {
                    </Col>
 
                 {cartItems.length !== 0 && (
-                   <Col className="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-sm-12 ">
+                   <Col className="col-sm-12 col-md-4 col-lg-4 col-sm-12 ">
                       <Card className="card mb-4">
                         <CardHeader className="card-header py-3">
                           <h5 className="mb-0">جمع سبد خرید</h5>
