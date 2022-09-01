@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import {Container,Row,Col,Card,CardImg,CardBody,CardTitle,Button,CardSubtitle,CardText} from 'reactstrap';
-import '../css/products.css'
+import '../css/products.css';
 import { useContext } from 'react';
 import { cartContext } from '../context/shoppingCartContext';
 import { useParams } from 'react-router-dom';
@@ -34,18 +34,18 @@ const Detailse =() =>{
                                      <CardImg  src={'/'+product.img}  className="img-fluid rounded-3" alt="img" />
                                    </div>
                                     <div className='col-md-8'>
-                                     <div className="">
+                                     <div>
                                       <CardTitle className="lead fw-normal mb-2">
                                         {product.title}
                                       </CardTitle>
                                     </div>
-                                   <div className="">
+                                   <div>
                                    <CardSubtitle>
                                        {product.description}
                                    </CardSubtitle>
                                    </div>
                                   
-                                   <div className='' >
+                                   <div>
                                        <CardText>
                                        <div className='category'>
                                                <span className='float-end'>دسته</span>
@@ -87,7 +87,6 @@ const Detailse =() =>{
                                             </div>
                                           </div>
                                          }
-
                                    </div>                              
                                  </div>
                                </CardBody>

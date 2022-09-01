@@ -34,8 +34,8 @@ const Cart = () => {
                               <br/>
                               سبد خرید شما خالی است!
                         </div>
-                   }
-
+                   } 
+                   
                 <Col className="col-sm-12 col-md-8">
                       {cartItems.length !== 0 && (
                             <Card className="card rounded-3 mb-1">

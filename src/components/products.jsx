@@ -35,7 +35,7 @@ const Products = () => {
          );
          console.log(data);
          resolve(data);
-       }, 3000);       
+       }, 4000);       
       });
    };
 
@@ -44,14 +44,15 @@ const Products = () => {
     return (
          <>
            <Container>
-              <Row md={4} xs={1} sm={2} > 
+              <Row md={4} xs={1} sm={2}> 
               {data.map(product => {
                   return  <Product key={product.id} product={product} cartItems={cartItems} favItems={favItems} getItemQuntity={getItemQuntity} onAdd={onAdd} onDelete={onDelete} onRemove={onRemove} onFavorite={onFavorite} changeModal={changeModal}/>
                  })}
-               <div ref={triggerRef} className={clsx('trigger' , {visible: loading})} >
+              
+               </Row>    
+               <div ref={triggerRef} className={clsx('trigger' , {visible: loading})}>
                   <LoadingPosts/>
-               </div>  
-               </Row>         
+               </div>      
             </Container> 
          </>
      );
